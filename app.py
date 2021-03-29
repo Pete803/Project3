@@ -1,11 +1,15 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_pymongo import PyMongo
+# from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/about")
+def home():
+    return render_template("about.html")
 
 @app.route("/piechart")
 def piechart():
