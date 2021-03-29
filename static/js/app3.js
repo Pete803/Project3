@@ -21,7 +21,7 @@ var svg = d3.select("body").append("svg")
     "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("data/data.csv").then(function (data) {
+d3.csv("data/pppData.csv").then(function (data) {
 
   // format the data
   data.forEach(function (d) {
@@ -53,8 +53,13 @@ d3.csv("data/data.csv").then(function (data) {
     .attr("width", x.bandwidth())
     .attr("y", function (d) { return y(d.loanAmount); })
     .attr("height", function (d) { return height - y(d.loanAmount); })
-    .on('mouseover', toolTip.show)
-    .on('mouseout', toolTip.hide);
+    .on('mouseover', function(data) {
+      toolTip.show(data, this);
+    })
+    .on('mouseout', function(data) {
+      toolTip.hide(data);
+    });
+
 
   // append title
   svg.append("text")
@@ -82,7 +87,6 @@ d3.csv("data/data.csv").then(function (data) {
     .call(d3.axisLeft(y));
 
 });
-
 
 
 
