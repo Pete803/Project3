@@ -55,12 +55,16 @@
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('static/img/benfranklin.jpg')">
+    <div style="opacity:1.0;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
             <h1>PPP Loans in VA</h1>
+            <p style="color:white;" >For this assignment we look at PPP loans under $150k 
+              in the state of Virginia. The loans were broken down by congressional district and business type 
+              based on NAICS code.</p>
             <span class="subheading">For this assignment we look at PPP loans under $150k 
               in the state of Virginia. The loans were broken down by congressional district and business type 
               based on NAICS code.
@@ -71,21 +75,23 @@
     </div>
   </header>
 
+  
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
-          <a href="https://en.wikipedia.org/wiki/Paycheck_Protection_Program" target="blank">
-            <h2 class="post-subtitle">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <h2 class="post-subtitle">
               The Paycheck Protection Program (PPP) is a $953-billion business loan program 
               established by the United States federal government in 2020 through the Coronavirus Aid,
                Relief, and Economic Security Act (CARES Act) to help certain businesses, self-employed workers, 
                sole proprietors, certain nonprofit organizations, and tribal businesses continue paying their workers
             </h2>
-            <h3 class="post-subtitle">
+            <!-- <h3 class="post-subtitle"> -->
               <!-- Problems look mighty small from 150 miles up -->
-            </h3>
+            <!-- </h3> -->
          
         </div>
         <hr>
@@ -130,16 +136,15 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+          <p class="copyright text-muted">Copyright &copy; University of Richmond Data Viz Bootcamp 2021</p>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}">
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="static/js/clean-blog.min.js"></script>
