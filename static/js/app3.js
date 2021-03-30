@@ -21,7 +21,7 @@ var svg = d3.select("body").append("svg")
     "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("../static/Data/pppData.csv").then(function (data) {
+d3.csv("../static/data/pppData.csv").then(function (data) {
 
   // format the data
   data.forEach(function (d) {
